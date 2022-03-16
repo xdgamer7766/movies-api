@@ -4,15 +4,15 @@ const router = express.Router()
 
 
 router.get('/snake',(req, res) =>{
-    res.send("snek")
+    res.json({"name": "snek", "age" : 4})
 })
 
 router.get('/bearded-dragon',(req, res) =>{
-    res.send("dragon with a beard")
+    res.json({"name": "beardo", "age" : 6})
 })
 
 router.get('/turtle',(req, res) =>{
-    res.send("just an empty shell")
+    res.json({"name" : "shelly", "age" : 99})
 })
 
 module.exports = router

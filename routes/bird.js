@@ -4,11 +4,11 @@ const router = express.Router()
 
 
 router.get('/budgie',(req, res) =>{
-    res.send("I am gonna be honest i dont know what that is")
+    res.json({"name" : "idk bird?", "age": 69})
 })
 
 router.get('/owl',(req, res) =>{
-    res.send("looking around")
+    res.json({"name" : "strange birb", "age" : 15})
 })
 
 
