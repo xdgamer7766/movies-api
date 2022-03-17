@@ -1,6 +1,6 @@
 const express = require("express")
 
-const router = express.router()
+const router = express.Router()
 
 const films = [
     {"name" : "American psycho", "releaseDate" : 2001, "rating" : 90 },
@@ -8,4 +8,8 @@ const films = [
     {"name" : "A quite place", "releaseDate" : 2018, "rating" : 96}
 ]
 
-module.exports(router)
+router.get("",(req,res) => {
+    res.json(films[Math.floor(Math.random() * films.length)])
+})
+
+module.exports = router
