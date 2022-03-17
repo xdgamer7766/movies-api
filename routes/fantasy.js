@@ -1,4 +1,5 @@
 const express = require("express")
+const req = require("express/lib/request")
 
 const router = express.Router()
 
@@ -13,6 +14,12 @@ router.get("",(req,res) => {
 })
 
 router.get("/all",(req,res) => {
+    res.json(films)
+    console.log(req.body.ertek)
+})
+
+router.get("/add",(req,res) => {
+    films.push({name : req.body.name,releaseDate : parseInt(req.body.releaseDate), rating : parseInt(req.body.rating)})
     res.json(films)
 })
 

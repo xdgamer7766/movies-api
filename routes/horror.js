@@ -16,4 +16,8 @@ router.get("/all",(req,res) => {
     res.json(films)
 })
 
+router.get("/add",(req,res) => {
+    films.push({"name" : req.name,"releaseDate" : parseInt(req.releaseDate), "rating" : parseInt(req.rating)})
+})
+
 module.exports = router

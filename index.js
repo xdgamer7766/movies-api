@@ -4,6 +4,7 @@ const horror = require("./routes/horror.js")
 const fantasy = require("./routes/fantasy.js")
 
 const app = express()
+app.use(express.urlencoded({extended:true}))
 
 app.get("/api",(req,res) => {
     res.send("api version: 1.0.0")
