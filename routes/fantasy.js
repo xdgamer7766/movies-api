@@ -12,4 +12,8 @@ router.get("",(req,res) => {
     res.json(films[Math.floor(Math.random() * films.length)])
 })
 
+router.get("/all",(req,res) => {
+    res.json(films)
+})
+
 module.exports = router
